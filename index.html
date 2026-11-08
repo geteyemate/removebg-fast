@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Optimized Title -->
+  <title>Remove Background Fast - Free AI Background Remover</title>
+  <link rel="manifest" href="manifest.json">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 min-h-screen flex flex-col items-center justify-between p-4 font-sans">
+
+  <!-- Header -->
+  <header class="w-full max-w-md text-center py-6">
+    <h1 class="text-3xl font-extrabold tracking-tight">REMOVE BACKGROUND</h1>
+    <p class="text-xs tracking-widest text-gray-400 mt-1 uppercase font-semibold">⚡ Fast AI Remover • by Clipr</p>
+  </header>
+
+  <!-- Main App Card -->
+  <main class="w-full max-w-md bg-white border-2 border-dashed border-gray-300 rounded-3xl p-6 text-center space-y-6 shadow-sm">
+    
+    <!-- Upload Area -->
+    <div id="upload-zone" class="flex flex-col items-center justify-center py-8 cursor-pointer">
+      <svg class="w-16 h-16 text-gray-800 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+      </svg>
+      <input type="file" id="image-input" accept="image/*" class="hidden">
+      <button onclick="document.getElementById('image-input').click()" class="bg-black text-white font-semibold px-6 py-3 rounded-xl hover:bg-gray-800 transition active:scale-95">
+        Upload File
+      </button>
+    </div>
+
+    <!-- Status / Loading -->
+    <div id="status" class="hidden text-sm font-medium text-gray-600 animate-pulse">
+      Processing Image... Please wait ⌛
+    </div>
+
+    <!-- Preview Result -->
+    <div id="result-container" class="hidden space-y-4">
+      <div class="relative w-full aspect-square bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] rounded-2xl flex items-center justify-center overflow-hidden border">
+        <img id="result-img" class="max-h-full object-contain" alt="Result">
+      </div>
+      <a id="download-btn" download="removebg-fast.png" class="block w-full bg-black text-white font-semibold py-3 rounded-xl hover:bg-gray-800 transition text-center">
+        Download Result
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full max-w-md text-center py-4 text-xs text-gray-400">
+    Powered by Client-Side AI • Zero Server Storage
+  </footer>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
